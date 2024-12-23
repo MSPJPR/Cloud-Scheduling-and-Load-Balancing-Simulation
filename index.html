@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Scheduling and Load Balancing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cloud Scheduling and Load Balancing Simulation</h1>
+    
+    <!-- Input Form for Tasks -->
+    <div id="task-input">
+        <h3>Add Tasks</h3>
+        <label for="taskExecTime">Execution Time:</label>
+        <input type="number" id="taskExecTime" placeholder="Enter execution time">
+        <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <!-- Algorithm Selection -->
+    <div id="algorithm-selection">
+        <h3>Select Algorithm</h3>
+        <button onclick="selectAlgorithm('FCFS')">FCFS</button>
+        <button onclick="selectAlgorithm('RoundRobin')">Round Robin</button>
+        <button onclick="selectAlgorithm('Greedy')">Greedy</button>
+    </div>
+
+    <!-- Real-Time Statistics -->
+    <div id="stats">
+        <h3>Statistics</h3>
+        <p id="avgResponseTime">Average Response Time: </p>
+        <p id="taskWaitingTime">Task Waiting Time: </p>
+        <p id="resourceUtilization">Resource Utilization: </p>
+    </div>
+
+    <!-- Visualization Canvas -->
+    <div id="app"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
